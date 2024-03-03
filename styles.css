@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    margin: 0;
+  }
+  
+  #bell-container {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  #bell-icon {
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #notification-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+  
+  .shake {
+    animation: shakeAnimation 0.5s ease-in-out;
+  }
+  
+  @keyframes shakeAnimation {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+    100% { transform: rotate(0); }
+  }
